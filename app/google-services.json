@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "556026632325",
+    "project_id": "operacionescrud-7117f",
+    "storage_bucket": "operacionescrud-7117f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556026632325:android:33e02e90cb37de74b7b1ec",
+        "android_client_info": {
+          "package_name": "com.veterinaria.operacionescrud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556026632325-u4a399jajjrvpgo7gun2aaaq3so5372p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbivjVjS7ulXlfkUyBMViXF0YIkVb5Xlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556026632325-u4a399jajjrvpgo7gun2aaaq3so5372p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
