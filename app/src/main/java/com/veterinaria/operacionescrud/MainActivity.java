@@ -2,10 +2,12 @@ package com.veterinaria.operacionescrud;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -17,6 +19,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private EditText edtxDocumento,edtxNombre,edtxApellido;
+
     private Button btnRegistrar,btnEditar,btnEliminar,btnConsultar;
 
 FirebaseFirestore firestore = FirebaseFirestore.getInstance();
@@ -25,7 +28,6 @@ FirebaseFirestore firestore = FirebaseFirestore.getInstance();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         edtxDocumento=findViewById(R.id.edtxDocumento);
         edtxNombre=findViewById(R.id.edtxNombre);
@@ -50,21 +52,25 @@ FirebaseFirestore firestore = FirebaseFirestore.getInstance();
                 editar();
             }
         });
+
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 eliminar();
             }
         });
+
         btnConsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                consultar();
             }
         });
 
 
     }
+
+
 
     private void registrar(){
 
@@ -91,6 +97,12 @@ FirebaseFirestore firestore = FirebaseFirestore.getInstance();
     private void eliminar(){
 
         firestore.collection("Personas").document(edtxDocumento.getText().toString()).delete();
+    }
+
+    private void consultar(){
+
+        startActivity(new Intent(MainActivity.this,MostrarDatosActivity.class));
+
     }
 
 
